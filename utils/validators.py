@@ -1,0 +1,1 @@
+# Validaciones generales (números, campos vacíos).

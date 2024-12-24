@@ -1,0 +1,1 @@
+# Generación de imagen con logo, fecha y presupuesto.
