@@ -1,1 +1,0 @@
-# (Opcional) Datos iniciales para poblar la base.
