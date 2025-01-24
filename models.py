@@ -20,6 +20,10 @@ class BaseModel:
         """Obtiene un registro por ID."""
         return self.db.get(self.query.id == record_id)
     
+    def read_by_name(self, kind, name):  
+        """Obtiene un registro por Tipo y Nombre."""  
+        return self.db.search((self.query.tipo == kind) & (self.query.nombre == name))
+    
     def update(self, record_id, updates):
         """Actualiza un registro por ID."""
         return self.db.update(updates, self.query.id == record_id)

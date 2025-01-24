@@ -16,26 +16,14 @@ STEEL_PINK = "#A13E97"
 TURQUESA = "#85b8cb"
 PISTACHO = "#d1dddb" 
 
-# VALORES PARA WIDGETS
-TIPO = ['Vodka', 
-        'Piña Colada', 
-        'Licor de menta',
-        'Licor de frutilla',
-        'Licor de durazno',
-        'Licor de chocolate',
-        'Licor de huevo',
-        'Blue curacao',
-        'Granadina',
-        'Licor de kiwi',
-        'Gaseosa limón',
-        'Jugo naranja',
-        'Tequila',
-        'Whisky'
-        ]
+BARRA_TITULO = "#f3f3f3"
+BARRA_MENU = "#bfdbff"
+BARRA_TOOLS = "#b9cbe1"
+TAPIZ = "#ece9d8"
 
-MILILITROS = [200, 250, 500, 700, 750, 800, 900, 1000, 1250]
+MILILITROS = [200, 250, 500, 700, 750, 800, 900, 1000, 1250] # ESTO DEBE IR EN LA DB
 
-CANT_MILILITROS = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80]
+CANT_MILILITROS = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80] # ESTO DEBE IR EN LA DB
 
 # FUNCIONES GENERALES
 
@@ -53,14 +41,12 @@ def style_notebook():
     # Estilo para las pestañas
     style = ttk.Style()
     style.theme_use('default')  # Asegura que el tema sea personalizable
-    
     # Configurar el color de fondo de las pestañas
-    style.configure('TNotebook', background=TURQUESA, tabmargins=[2, 5, 2, 0])
-    style.configure('TNotebook.Tab', background=PISTACHO, foreground='black', padding=[80, 10])
-    style.map('TNotebook.Tab', background=[('selected', BLUE_WILLOW)])  # Color de pestaña activa
-
+    style.configure('TNotebook', background=BARRA_MENU, tabmargins=[2, 5, 2, 0]) 
+    style.configure('TNotebook.Tab', background=BARRA_TOOLS, foreground='black', padding=[80, 10]) 
+    style.map('TNotebook.Tab', background=[('selected', TAPIZ)])  # Color de pestaña activa BLUE_WILLOW
     # Color de fondo del contenido de las pestañas
-    style.configure('TFrame', background=BLUE_WILLOW)
+    style.configure('TFrame', background=TAPIZ)
 
 
 def on_close(root, modal):
@@ -99,3 +85,9 @@ def validate_float_input(new_value):
         return True  # Permite números enteros y decimales
     except ValueError:
         return False  # Rechaza cualquier otro valor
+
+
+def valores_tipo(bebidas):
+    # Crear lista con los tipos de bebidas
+    valores_tipo = [bebida['tipo'].title() for bebida in bebidas if isinstance(bebida, dict) and 'tipo' in bebida]
+    return valores_tipo

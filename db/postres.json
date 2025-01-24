@@ -1,1 +1,1 @@
-{"_default": {"1": {"id": 1, "tipo": "Tarta", "nombre": "Cheesecake", "precio_costo": 20.0, "precio_venta": 35.0, "presentacion": "Porci\u00f3n"}}}
+{"_default": {"1": {"id": 1, "tipo": "tarta", "nombre": "cheesecake", "precio_costo": 20.0, "precio_venta": 35.0, "presentacion": "Porci\u00f3n"}}}

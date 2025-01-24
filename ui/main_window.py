@@ -65,9 +65,11 @@ class MainWindow:
         btn_salir.place(x=108, y=320, width=84, height=30)
 
     def open_beverages(self):
+        self.root.iconify()
         BeveragesWindow(self.root)
 
     def open_desserts(self):
+        self.root.iconify()
         DessertsWindow(self.root)
 
     def run(self):
