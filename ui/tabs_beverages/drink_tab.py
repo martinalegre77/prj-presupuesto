@@ -181,7 +181,6 @@ class DrinkTab:
         # Obtener el ID desde los metadatos del TreeView
         selected_item = selected_item[0]
         id_item = self.tree.set(selected_item, 'id')
-
         if not id_item:
             # self.master.iconify()
             messagebox.showerror("Error", "No se encontró la bebida seleccionada.")
@@ -189,7 +188,6 @@ class DrinkTab:
         
         # Obtener datos de la base de datos usando el ID
         bebida = self.bebidas_model.read_by_id(int(id_item))
-
         if not bebida:
             # self.master.iconify()
             messagebox.showerror("Error", "No se pudo encontrar la bebida en la base de datos.")
