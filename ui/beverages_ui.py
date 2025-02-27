@@ -1,17 +1,10 @@
 
 import tkinter as tk
 from tkinter import ttk
-# from tkinter import messagebox
 import config
-# from models import BebidasModel, PresupuestoBebidaModel, TragosModel
 from .tabs_beverages.budget_tab import BudgetTab
 from .tabs_beverages.drink_tab import DrinkTab
 from .tabs_beverages.beverage_tab import BeverageTab
-
-# Crear instancias de los modelos
-# presupuesto_model = PresupuestoBebidaModel()
-# bebidas_model = BebidasModel()
-# tragos_model = TragosModel()
 
 class BeveragesWindow:
     def __init__(self, master):
